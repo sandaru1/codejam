@@ -1,0 +1,11 @@
+dev:
+
+test:
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=codejam'
+      username: root
+      password: test

@@ -1,0 +1,5 @@
+# default values
+all:
+  facebook:
+    api_key: haha
+    api_secret: youwish

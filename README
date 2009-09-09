@@ -1,0 +1,34 @@
+Facebook App for Codejam scoreboard
+-----------------------------------
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+  www - Contains the PHP facebook application. The webapp is written on top of symfony.
+    - config the database on config/databases.yml
+    - facebook API keys are on apps/frontend/config/app.yml
+  codejam - extracting codejam data
+    - download_code.php - depricated
+    - analyze_code.php - depricated
+    - download_scores.sh - downloads the scoreboard
+    - extract_scores.php - go through json files and inserts them into the database
+    - set_code.php - sets the language of submissions (the languages are taken from the sqlite3 database in http://www.go-hero.net/jam/, export the submissions table a file)
+  tc - extracting topcoder ratings
+    - download the topcoder algorithm data feed to "tc.xml"
+    - extract.php > coders
+    - match.php - finds the codejam/topcoder users based on the handles and updates the codejam database
+    - TC rating is taken from a separate database and simple API call
+    - insert.php inserts the TC rating into a database called "tc"(built from tc.sql)
+    - tc_api.php - API entry point for symfony
+

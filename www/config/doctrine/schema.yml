@@ -1,0 +1,63 @@
+User:
+  tableName: user
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    handle: string(200)
+    country: string(200)
+    fb: string(100)
+    tc: integer
+    tc_handle: string(200)
+    tc_rating: integer
+    votes: integer
+    voted: string(200)
+
+Score:
+  tableName: score
+  columns:
+    user_id:
+      type: integer
+      primary: true
+    competition_id:
+      type: integer
+      primary: true
+    question:
+      type: integer
+      primary: true
+    time: integer
+    tries: integer
+    lang: string(20)
+  relations:
+    Competition:
+      class: Competition
+    User:
+      class: User
+
+Competition:
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    name: string(200)
+    questions: integer
+
+Rank:
+  tableName: rank
+  columns:
+    user_id:
+      type: integer
+      primary: true
+    competition_id:
+      type: integer
+      primary: true
+    rank: integer
+    points: integer
+  relations:
+    Competition:
+      class: Competition
+    User:
+      class: User
+

@@ -1,0 +1,112 @@
+.scoreboard {
+  margin-top:17px;
+  text-align:center;  
+}
+
+.scoreboard th {
+  border-color:#C7CFE0;
+  border-bottom:1px solid #E2E6EF;
+  margin:0;
+  padding:3px;
+  color:#777777;
+  font-size:9px;
+}
+
+.scoreboard tr {
+}
+
+.scoreboard td {
+  border-bottom:1px solid #E2E6EF;
+  margin:0;
+  padding:3px;
+  color:#555555;
+  font-size:10px;
+}
+
+.scoreboard .even {
+  background:#F8F8F8 none repeat scroll 0 0;
+}
+
+.pager {
+  background:#F2F2F2 none repeat scroll 0 0;
+  border-color:#C0C0C0 #E7E7E7 #E7E7E7;
+  border-style:solid;
+  border-width:1px;
+  padding:4px 6px;
+  font-size:10px;
+  line-height:22px;
+}
+
+.pager a {
+  text-decoration:none;
+}
+
+.pager .count {
+  float:right;
+}
+
+.scoreboard a {
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* TC styles */
+.coderTextRed, .coderTextRed:link, .coderTextRed:visited, .coderTextRed:hover, .coderTextRed:active { color: #EE0000; }
+.coderTextYellow, .coderTextYellow:link, .coderTextYellow:visited, .coderTextYellow:hover, .coderTextYellow:active { color: #DDCC00; }
+.coderTextBlue, .coderTextBlue:link, .coderTextBlue:visited, .coderTextBlue:hover, .coderTextBlue:active { color: #6666FF; }
+.coderTextGreen, .coderTextGreen:link, .coderTextGreen:visited, .coderTextGreen:hover, .coderTextGreen:active { color: #00A900; }
+.coderTextGray, .coderTextGray:link, .coderTextGray:visited, .coderTextGray:hover, .coderTextGray:active { color: #999999; }
+
+/* Icons */
+
+.icon {
+  background-repeat:no-repeat;
+  padding-left:16px;
+  line-height:16px;
+  display:block;
+  background-image:url('http://www.sandaru1.com/thecodejam/images/unknown.png');
+}
+
+.icon_CPP {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/cpp.png');
+}
+
+.icon_Java {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/java.png');
+}
+
+.icon_PHP {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/php.png');
+}
+
+.icon_C {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/c.png');
+}
+
+.icon_Python {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/python.png');
+}
+
+.icon_Ruby {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/ruby.png');
+}
+
+.icon_CSharp {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/csharp.png');
+}
+
+.icon_Perl {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/perl.png');
+}
+
+.icon_Javascript {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/javascript.png');
+}
+
+.icon_Haskell {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/haskell.png');
+}
+
+.icon_Shell {
+  background-image:url('http://www.sandaru1.com/thecodejam/images/sh.png');
+}
