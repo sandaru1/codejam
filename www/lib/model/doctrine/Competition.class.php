@@ -22,9 +22,10 @@ class Competition extends BaseCompetition
     for($i=0;$i<$form->getOption('questions');$i++) {
       if ($form->getValue('question_'.$i)!=null) {
         $s = "s".$i;
-        $query->andWhere("u.id IN (SELECT $s.user_id FROM Score $s WHERE competition_id=".$this->getId()." AND $s.question=$i AND $s.time!=-1)");
+        $query->andWhere("u.id IN (SELECT $s.user_id FROM Score $s WHERE $s.competition_id=".$this->getId()." AND $s.question=$i AND $s.time!=-1)");
       }
     }
+    $query->orderBy('r.rank');
     return $query;
   }
 
