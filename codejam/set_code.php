@@ -15,7 +15,7 @@
     $i = 0;
     foreach($submissions as $submission) {
       $data = split("\|",$submission);
-      $q = "UPDATE score SET score.lang='".$data[5]."' WHERE score.user_id=".$users[$data[0]]." AND competition_id=2 AND question=".($data[3]-1);
+      $q = "UPDATE score SET score.lang='".$data[5]."' WHERE score.user_id=".$users[$data[0]]." AND competition_id=$round AND question=".($data[3]-1);
       mysql_query($q, $conn);
       $i++;
       if (($i%1000)==0)
