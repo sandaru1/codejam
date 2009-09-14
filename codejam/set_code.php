@@ -36,5 +36,6 @@
     UPDATE score SET lang='CSharp' WHERE lang='C#';
     UPDATE score SET lang='Unknown' WHERE lang='?';
     UPDATE score SET lang='FSharp' WHERE lang='F#';    
+    UPDATE score SET lang='ObjectiveC' WHERE lang='Objective-C';    
   */
 ?>
