@@ -38,7 +38,7 @@
         $scores = $rank->getScores();
         foreach($scores as $score) {
           ?>
-            <td><?php echo $score->getFormatedTime(); ?></td>
+            <td><?php echo $score->getFormatedTime($rank->getUser()->getHandle()); ?></td>
           <?php
         }
       ?>

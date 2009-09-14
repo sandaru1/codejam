@@ -6,17 +6,42 @@
 class Score extends BaseScore
 {
 
-  public function getLangIcon($text) {
+  private static $path = "http://code.google.com/codejam/contest/scoreboard/do?cmd=GetSourceCode";
+  
+  private static $contests = array(
+        1 => array(
+          'id' => '90101',
+          'questions' => array('116101','111101','122101')
+        ),
+        2 => array(
+          'id' => '188266',
+          'questions' => array('168107','144111','190103')
+        ),
+        3 => array(
+          'id' => '186264',
+          'questions' => array('171116','203106','208101')
+        ),
+        4 => array(
+          'id' => '189252',
+          'questions' => array('171121','156117','192120')
+        )
+      );
+
+
+  public function getLangIcon($text,$handle) {
+    $info = Score::$contests[$this->getCompetitionId()];
+    $question = $this->getQuestion();
+    $url = Score::$path."&contest=".$info['id']."&problem=".$info['questions'][floor($question/2)]."&io_set_id=".($question%2)."&username=".$handle;
     $class = "icon icon_".$this->getLang();
-    return '<span title="'.$this->getLang().'" class="'.$class.'">'.$text.'</span>';
+    return '<a href="'.$url.'" title="'.$this->getLang().'" class="'.$class.'">'.$text.'</span>';
   }
 
-  public function getFormatedTime() {
+  public function getFormatedTime($handle='') {
     $score = $this->getTime();
     if ($score==-1)
       return "--";
     $s = sprintf("%02d",$score/(60*60)).":".sprintf("%02d",($score/60)%60).":".sprintf("%02d",$score%60);
-    return $this->getLangIcon($s);
+    return $this->getLangIcon($s,$handle);
   }
 
 }
