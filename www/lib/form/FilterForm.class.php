@@ -4,7 +4,12 @@ class FilterForm extends sfForm {
 
   public function configure()
   {
-    $countries = Doctrine::getTable('User')->getCountries();
+    if (isset($this->options['competition'])) {
+      $countries = Doctrine::getTable('Competition')->getCountries($this->options['competition']);
+    } else {
+      $countries = Doctrine::getTable('User')->getCountries();
+    }
+    
 
     $this->setWidgets(array(
       'handle'          => new sfWidgetFormInput(array(),array('class' => 'inputtext','style' => 'width:243px')),

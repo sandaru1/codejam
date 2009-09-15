@@ -21,7 +21,7 @@ class scoresActions extends sfActions
     $this->round = $request->getParameter('round');
     $competition = Doctrine::getTable('Competition')->find($this->round);
     
-    $this->form = new FilterForm(array(),array('questions' => $competition->getQuestions()));
+    $this->form = new FilterForm(array(),array('questions' => $competition->getQuestions(),'competition' => $this->round));
     $this->form->bind($request->getParameter($this->form->getName()));
     
     $size = $this->form->getValue('results');
